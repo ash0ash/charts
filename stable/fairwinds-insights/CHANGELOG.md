@@ -1,4 +1,6 @@
 # Changelog
+## 0.8.0
+* Switch to postgresql-ha chart
 
 ## 0.7.4
 * Update application version to 10.7. [See the release notes for more details](https://insights.docs.fairwinds.com/release-notes)

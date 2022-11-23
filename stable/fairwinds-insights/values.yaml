@@ -439,15 +439,20 @@ postgresql:
   ephemeral: true
   # -- SSL mode for connecting to the database
   sslMode: require
-  # -- Secret name to use for Postgres Password
-  existingSecret: fwinsights-postgresql
-  # -- Username to connect to Postgres with
-  postgresqlUsername: postgres
-  # -- Name of the Postgres Database
-  postgresqlDatabase: fairwinds_insights
+  postgresql:
+    # -- Secret name to use for Postgres Password
+    existingSecret: fwinsights-postgresql
+    # -- Username to connect to Postgres with
+    username: postgres
+    # -- Name of the Postgres Database
+    database: fairwinds_insights
+    replicaCount: 2
+    pdb:
+      create: true
   service:
     # -- Port of the Postgres Database
-    port: 5432
+    ports:
+      postgresql: 5432
   persistence:
     # -- Create Persistent Volume with Postgres
     enabled: true
