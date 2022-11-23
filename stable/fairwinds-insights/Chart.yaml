@@ -9,7 +9,7 @@ maintainers:
 - name: ivanfetch-fw
 dependencies:
 - name: postgresql-ha
-  version: 10.15.1
+  version: 10.0.4
   repository: https://charts.bitnami.com/bitnami
   condition: postgresql.ephemeral
   alias: postgresql
