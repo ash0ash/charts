@@ -439,6 +439,7 @@ postgresql:
   ephemeral: true
   # -- SSL mode for connecting to the database
   sslMode: require
+  existingSecret: fwinsights-postgresql
   postgresql:
     # -- Secret name to use for Postgres Password
     existingSecret: fwinsights-postgresql
